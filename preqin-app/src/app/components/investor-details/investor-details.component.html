@@ -1,1 +1,15 @@
-<p>investor-details works!</p>
+<h2>Investor Details</h2>
+<select (change)="getCommitment($any($event.target).value)">
+    <option value="">Select Asset Class</option>
+    <option value="PE">PE (Private Equity)</option>
+    <option value="PD">PD (Private Debt)</option>
+    <option value="RE">RE (Real Estate)</option>
+    <option value="INF">INF (Infrastructure)</option>
+    <option value="NR">NR (Natural Resources)</option>
+    <option value="HF">HF (Hedge Funds)</option>
+</select>
+
+<div *ngIf="commitment">
+    <h3>Commitment Information</h3>
+    <p>{{ commitment}}</p>
+</div>
